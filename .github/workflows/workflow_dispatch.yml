@@ -1,4 +1,4 @@
-name: "by workflow_dispatch"
+name: "File Creation"
 
 on:
     push:
