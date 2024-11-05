@@ -1,7 +1,10 @@
 name: "by workflow_dispatch"
 
 on:
-    workflow_dispatch:
+    push:
+      branches:
+      - main
+      - master
 jobs:
     Practice_of_YML:
         runs-on: ubuntu-latest
@@ -17,8 +20,17 @@ jobs:
           - name: "Print Something"
             run: echo "Hello Priyanka How are You"
 
-          - name: "NPm initialization" 
-            run: npm init
+          - name: "crate directory" 
+            run: mkdir Directory1
+
+          - name: "go to the created directory"
+            run: cd Directory1
+          
+          - name: "create file on the current directory"
+            run: "touch file.txt"
+          
+         
+
 
 
             
