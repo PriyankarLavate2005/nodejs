@@ -1,4 +1,4 @@
-name: "Practice of YML"
+name: "by workflow_dispatch"
 
 on:
     workflow_dispatch:
