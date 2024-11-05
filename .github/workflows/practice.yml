@@ -1,0 +1,26 @@
+name: "Practice of YML"
+
+on:
+    push:
+        branches:
+            - main
+            - master
+jobs:
+    Practice_of_YML:
+        runs-on: ubuntu-latest
+
+        steps:
+          - name: "Setup Node js"
+            uses: actions/setup-node@v4
+            with:
+                node-version : "21"
+          - name: "check version of Node js"
+            run: node --version
+ 
+          - name: "Print Something"
+            run: echo "Hello Priyanka How are You"
+
+
+            
+
+

@@ -8,9 +8,9 @@ const server = http.createServer((req, res) => {
         res.end("here you can get information about the node js");
     }
     else {
-        res.end('Invalid URL'); 
+        res.end('Hello Priyanka'); 
     }
 });
-server.listen(3000, () => {
+server.listen(3002, () => {
     console.log("Server started on port 3000");
 });
