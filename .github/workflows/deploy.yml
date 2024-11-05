@@ -1,27 +1,29 @@
-name: "deploy to aws"
+name: "Deploy to the AWS"
 
-on: workflow_dispatch
+on:
+   workflow_dispatch:
+
 
 jobs:
-  deploy:
-    runs-on: self-hosted
+  Practice_of_YML:
+    runs-on: ubuntu-latest
     steps:
-      - name: "Setup Node.js"
-        uses: actions/setup-node@v2
-        with:
-          node-version: "14"
-
-      - name: "Checkout code"
+      - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: "Install dependencies"
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+
+      - name: Print current directory
+        run: pwd
+
+      - name: List files
+        run: ls -al
+
+      - name: Install dependencies
         run: npm install
 
-      - name: "Install pm2 Globally"
-        run: npm install pm2 -g
-
-      - name: "Run the tests"
+      - name: Run the tests
         run: npm test
-
-      - name: "Deploy to aws"
-        run: pm2 start server.js
